@@ -27,6 +27,8 @@ public class AIFishController : MonoBehaviour {
 
 	public int playerLayer = 8;
 
+	bool alive = true; // a bool to prevent double collisions
+
 
 	// Use this for initialization
 	void Start () {
@@ -58,7 +60,6 @@ public class AIFishController : MonoBehaviour {
 		// }
 
 		Vector2 newVelocity = new Vector2(horizontalSpeed, verticalSpeed);
-
 		rb.velocity = newVelocity;
 
 	}
@@ -104,8 +105,10 @@ public class AIFishController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
-		if (col.gameObject.layer == playerLayer) {
+		if (col.gameObject.layer == playerLayer && alive) {
+			alive = false;
 			playerController.currentLevel++;
+			Destroy(gameObject); 		
 		}
 	}
 	
