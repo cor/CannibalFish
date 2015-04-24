@@ -17,6 +17,8 @@ public class AIFishController : MonoBehaviour {
 
 	public float deadZone = 0.2f;
 
+	public bool enabled = false;
+
 	public int currentLevel = 0;
 
 	float initialWidth = 1f;
@@ -59,8 +61,12 @@ public class AIFishController : MonoBehaviour {
 		// 	rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * slowDownMultiplier);
 		// }
 
-		Vector2 newVelocity = new Vector2(horizontalSpeed, verticalSpeed);
-		rb.velocity = newVelocity;
+
+		if (enabled) {
+
+			Vector2 newVelocity = new Vector2(horizontalSpeed, verticalSpeed);
+			rb.velocity = newVelocity;
+		}
 
 	}
 
