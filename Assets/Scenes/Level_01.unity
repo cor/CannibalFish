@@ -97,6 +97,8 @@ GameObject:
   - 4: {fileID: 115203653}
   - 212: {fileID: 115203652}
   - 60: {fileID: 115203651}
+  - 114: {fileID: 115203654}
+  - 50: {fileID: 115203655}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -166,6 +168,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &115203654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115203650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb8fb9357a4d14c5dadb406ebcc960a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeedMultiplier: .100000001
+  slowDownMultiplier: .949999988
+  growValuePerLevel: .100000001
+  growValuePerUpdate: .0250000004
+  facingRight: 1
+  deadZone: .200000003
+  currentLevel: 1
+--- !u!50 &115203655
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115203650}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &641253758
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &641253759
 AudioListener:
   m_ObjectHideFlags: 0
@@ -215,7 +250,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .385705024, g: .587424278, b: .904411793, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

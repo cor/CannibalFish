@@ -67,7 +67,7 @@
 			"file": "Assets/Scripts/PlayerController.cs",
 			"settings":
 			{
-				"buffer_size": 212,
+				"buffer_size": 301,
 				"line_ending": "Unix"
 			}
 		}
@@ -193,20 +193,21 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 212,
+						"buffer_size": 301,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								129,
-								129
+								77,
+								109
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C#/C#.tmLanguage"
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -277,7 +278,7 @@
 		[
 			[
 				"",
-				"~/Development/Unity/LD32/CannibalFish.sublime-workspace"
+				"~/Development/Unity/LD32/LD32.sublime-project"
 			]
 		],
 		"width": 380.0
