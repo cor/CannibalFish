@@ -4,6 +4,9 @@ using System.Collections;
 public class AIFishController : MonoBehaviour {
 
 	Rigidbody2D rb;
+	public PlayerController playerController;
+
+
 	public float moveSpeedMultiplier = 0.05f;
 	public float slowDownMultiplier = 0.999f;
 
@@ -20,6 +23,10 @@ public class AIFishController : MonoBehaviour {
 
 	public float horizontalSpeed = 3f;
 	public float verticalSpeed = 0f;
+
+
+	public int playerLayer = 8;
+
 
 	// Use this for initialization
 	void Start () {
@@ -94,6 +101,12 @@ public class AIFishController : MonoBehaviour {
 
 		transform.localScale = scale;
 
+	}
+
+	void OnCollisionEnter2D(Collision2D col) {
+		if (col.gameObject.layer == playerLayer) {
+			playerController.currentLevel++;
+		}
 	}
 	
 }
